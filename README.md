@@ -20,6 +20,10 @@ hayatı sürdürebilmesi amacıyla planlanmış bir mobil uygulama projesidir
 
 
 
+
+
+
+
 • Mart 3. Hafta:
 Öğrencisin Mobil Uygulamasına Giriş, Kullanıcı Giriş ve Kullanıcı Kayıt Sayfası Tasarımı Yapılacak.
 
