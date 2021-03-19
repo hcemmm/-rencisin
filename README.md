@@ -17,11 +17,7 @@ nedenle öğrencilerin bulundukları şehirlerde maddi imkanlarını Öğrencisi
 uygulamasıyla ayarlayabilmesi, şehri daha iyi tanıyabilmesi ve mutlu bir öğrenim
 hayatı sürdürebilmesi amacıyla planlanmış bir mobil uygulama projesidir
 
-
-
-
-
-
+-------------------------------------------------------------------------------------------------
 
 
 • Mart 3. Hafta:
