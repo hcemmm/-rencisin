@@ -20,38 +20,38 @@ hayatı sürdürebilmesi amacıyla planlanmış bir mobil uygulama projesidir
 -------------------------------------------------------------------------------------------------
 
 
-• Mart 3. Hafta: (YÜKLENDİ)
+• Mart 22-28: (YÜKLENDİ)
 Öğrencisin Mobil Uygulamasına Giriş, Kullanıcı Giriş ve Kullanıcı Kayıt Sayfası Tasarımı Yapılacak.
 
-• Mart 4. Hafta: (YÜKLENDİ)
+• Mart 29-Nisan 4: (YÜKLENDİ)
 Öğrencisin Mobil Uygulamasına Giriş, Kullanıcı Giriş ve Kullanıcı Kayıt Sayfasının java kodları yazılacak ve Firebase bağlantısı oluşturulacak.
 
-• Nisan 1. Hafta:
+• Nisan 5- 11:
 Boş ana sayfa ve ana sayfa menü tasarımları oluşturulacak. Kullanıcı profil sayfası oluşturma, düzenleme ve kullanıcı profili tasarımı yapılacak.
 
-• Nisan 2. Hafta: 
+• Nisan 12- 18: 
 Kullanıcı profil sayfası oluşturma, düzenleme ve kullanıcı profili java kodları yazılacak ve Firebase bağlantısı oluşturulacak.
 
-• Nisan 3. Hafta:
+• Nisan 19- 25:
 Eğlence Sektöründeki kafe, AVM, restoran ve park activiylerinin tasarımları oluşturulacak. 
 
-• Nisan 4. Hafta:
+• Nisan 26- Mayıs 2:
 Eğlence sektöründe bulunan işletmelerin java kodları yazılacak ve Firebase bağlantısı oluşturulacak.
 Eğitim Sektöründeki üniversite, yurt ve kırtasiyelerin activiylerinin tasarımları oluşturulacak. 
 
-• Mayıs 1. Hafta:
+• Mayıs 3-9:
 Eğitim Sektöründeki üniversite, yurt ve kırtasiyelerin activiylerinin tasarımları oluşturulacak. 
 Eğitim Sektöründeki üniversite, yurt ve kırtasiyelerin java kodları yazılacak ve Firebase bağlantısı oluşturulacak.
 
-• Mayıs 2. Hafta:
+• Mayıs 10- 16:
 Google Maps projeye entegre edilecek. Eğlence ve Eğitim sektörünün bulunan işletmelerin projeye eklenecek.
 
-• Mayıs 3.Hafta:
+• Mayıs 17-23:
 Eklenmiş olan Projelerin konumları Google Maps ile eklenecek.
 
-• Mayıs 4.hafta:
+• Mayıs 24- 30:
 Eğlence ve Eğitim sektörünün bulunan işletmelerde yapılacak yorum ve değerlendirmeler Kullanıcı Profil ekranına aktarılacak.
 
-• Haziran 1.Hafta:
+• Mayıs 31- Haziran 6:
 Son test aşamaları ve proje teslim edilecek.
 
