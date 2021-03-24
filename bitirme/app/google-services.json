@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "786568845428",
+    "project_id": "ogrencisinbitirme",
+    "storage_bucket": "ogrencisinbitirme.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:786568845428:android:29ef58f4bb966014819921",
+        "android_client_info": {
+          "package_name": "com.example.bitirme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "786568845428-8i4l3nd42oo486gdl7nia27mec5n58ju.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyZB2wbh47HPnhwvGq3Bw_Qq2TBN017HI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "786568845428-8i4l3nd42oo486gdl7nia27mec5n58ju.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

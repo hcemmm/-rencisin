@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="profil_iletisim" type="id"/>
+    <item name="profil_yas" type="id"/>
+    <item name="profil_kadi" type="id"/>
+    <item name="ppfoto" type="id"/>
+    <item name="cardviev" type="id"/>
+    <item name="profil_buton" type="id"/>
+    <item name="profil_progress" type="id"/>
+</resources>
