@@ -20,10 +20,10 @@ hayatı sürdürebilmesi amacıyla planlanmış bir mobil uygulama projesidir
 -------------------------------------------------------------------------------------------------
 
 
-• Mart 3. Hafta:
+• Mart 3. Hafta: (YÜKLENDİ)
 Öğrencisin Mobil Uygulamasına Giriş, Kullanıcı Giriş ve Kullanıcı Kayıt Sayfası Tasarımı Yapılacak.
 
-• Mart 4. Hafta:
+• Mart 4. Hafta: (YÜKLENDİ)
 Öğrencisin Mobil Uygulamasına Giriş, Kullanıcı Giriş ve Kullanıcı Kayıt Sayfasının java kodları yazılacak ve Firebase bağlantısı oluşturulacak.
 
 • Nisan 1. Hafta:
