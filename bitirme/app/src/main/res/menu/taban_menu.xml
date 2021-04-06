@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="Anasayfa"
+        android:icon="@drawable/ic_baseline_anasayfa"
+        app:showAsAction="always"
+        android:id="@+id/anasayfa_bottom"/>
+
+    <item android:title="Egitim"
+        android:icon="@drawable/ic_baseline_egitim"
+        app:showAsAction="always"
+        android:id="@+id/egitim_bottom"/>
+
+    <item android:title="Eglence"
+        android:icon="@drawable/ic_baseline_eglence"
+        app:showAsAction="always"
+        android:id="@+id/eglence_bottom"/>
+
+    <item android:title="Profil"
+        android:icon="@drawable/ic_baseline_kullaniciprofil"
+        app:showAsAction="always"
+        android:enabled="true"
+        android:id="@+id/profile_bottom"/>
+
+
+</menu>
