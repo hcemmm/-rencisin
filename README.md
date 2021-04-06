@@ -23,10 +23,10 @@ hayatı sürdürebilmesi amacıyla planlanmış bir mobil uygulama projesidir
 • Mart 22-28: (YÜKLENDİ)
 Öğrencisin Mobil Uygulamasına Giriş, Kullanıcı Giriş ve Kullanıcı Kayıt Sayfası Tasarımı Yapılacak.
 
-• Mart 29-Nisan 4: (YÜKLENDİ)
+• Mart 29-Nisan 4:  (YÜKLENDİ)
 Öğrencisin Mobil Uygulamasına Giriş, Kullanıcı Giriş ve Kullanıcı Kayıt Sayfasının java kodları yazılacak ve Firebase bağlantısı oluşturulacak.
 
-• Nisan 5- 11:
+• Nisan 5- 11:  (YÜKLENDİ)
 Boş ana sayfa ve ana sayfa menü tasarımları oluşturulacak. Kullanıcı profil sayfası oluşturma, düzenleme ve kullanıcı profili tasarımı yapılacak.
 
 • Nisan 12- 18: 
