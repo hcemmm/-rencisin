@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".UpdateProfilActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:gravity="center_horizontal"
+        android:text="Profil Düzenle"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="40sp"
+        android:textStyle="normal|bold|italic" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ad Soyad"
+        android:id="@+id/et_name_up"
+        android:layout_margin="4dp"
+        android:drawablePadding="7dp"
+        android:drawableLeft="@drawable/ic_baseline_person_24"
+        android:paddingLeft="10dp"
+        android:textColor="@android:color/darker_gray"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Yaş"
+        android:id="@+id/et_yas"
+        android:layout_margin="4dp"
+        android:drawablePadding="7dp"
+        android:drawableLeft="@drawable/ic_baseline_info_24"
+        android:paddingLeft="10dp"
+        android:textColor="@android:color/darker_gray"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="İletişim"
+        android:id="@+id/et_iletisim"
+        android:layout_margin="4dp"
+        android:drawablePadding="7dp"
+        android:drawableLeft="@drawable/ic_baseline_email_24"
+        android:paddingLeft="10dp"
+        android:textColor="@android:color/darker_gray"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:text="Kaydet"
+        android:layout_margin="10dp"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_up"/>
+
+</LinearLayout>
