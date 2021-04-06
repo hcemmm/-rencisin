@@ -29,7 +29,7 @@ hayatı sürdürebilmesi amacıyla planlanmış bir mobil uygulama projesidir
 • Nisan 5- 11:  (YÜKLENDİ)
 Boş ana sayfa ve ana sayfa menü tasarımları oluşturulacak. Kullanıcı profil sayfası oluşturma, düzenleme ve kullanıcı profili tasarımı yapılacak.
 
-• Nisan 12- 18: 
+• Nisan 12- 18: (YÜKLENDİ)
 Kullanıcı profil sayfası oluşturma, düzenleme ve kullanıcı profili java kodları yazılacak ve Firebase bağlantısı oluşturulacak.
 
 • Nisan 19- 25:
