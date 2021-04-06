@@ -30,7 +30,7 @@ public class Tumkullanicilar {
     public String getAdsoyad() {
         return adsoyad;
     }
-
+ 
     public void setAdsoyad(String adsoyad) {
         this.adsoyad = adsoyad;
     }
