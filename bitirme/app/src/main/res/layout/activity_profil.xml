@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_700"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".ProfilActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:gravity="center_horizontal"
+        android:text="Profil"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="20sp"
+        android:textStyle="normal|bold|italic" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="30dp"
+        app:cardCornerRadius="75dp"
+        app:cardPreventCornerOverlap="false">
+
+
+        <ImageView
+            android:id="@+id/ppfoto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_baseline_person_24"
+            android:clickable="true"
+            android:scaleType="fitCenter" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:id="@+id/profil_kadi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:drawableStart="@drawable/ic_baseline_supervised_user_circle_24"
+        android:drawableLeft="@drawable/ic_baseline_supervised_user_circle_24"
+        android:hint="Ad Soyad"
+        android:textColor="@android:color/white" />
+
+    <EditText
+        android:id="@+id/profil_yas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:drawableStart="@drawable/ic_baseline_info_24"
+        android:drawableLeft="@drawable/ic_baseline_info_24"
+        android:hint="Yaş"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/profil_iletisim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:drawableStart="@drawable/ic_baseline_email_24"
+        android:drawableLeft="@drawable/ic_baseline_email_24"
+        android:hint="İletişim"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/profil_buton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="60dp"
+        android:layout_marginTop="20dp"
+        android:text="KAYDET"
+        android:textColor="#F30C0C"
+        android:textStyle="normal|bold|italic"
+        app:backgroundTint="@android:color/transparent" />
+
+
+    <ProgressBar
+        android:id="@+id/profil_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-50dp"
+        android:visibility="invisible"
+        android:background="@android:color/white" />
+
+
+</LinearLayout>
