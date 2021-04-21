@@ -32,25 +32,25 @@ Boş ana sayfa ve ana sayfa menü tasarımları oluşturulacak. Kullanıcı prof
 • Nisan 12- 18: (YÜKLENDİ)
 Kullanıcı profil sayfası oluşturma, düzenleme ve kullanıcı profili java kodları yazılacak ve Firebase bağlantısı oluşturulacak.
 
-• Nisan 19- 25:
-Eğlence Sektöründeki kafe, AVM, restoran ve park activiylerinin tasarımları oluşturulacak. 
+• Nisan 19- 25: (YÜKLENDİ)
+Eğitim Sektöründeki üniversite, yurt ve kırtasiyelerin activiylerinin tasarımları oluşturulacak.
 
 • Nisan 26- Mayıs 2:
-Eğlence sektöründe bulunan işletmelerin java kodları yazılacak ve Firebase bağlantısı oluşturulacak.
-Eğitim Sektöründeki üniversite, yurt ve kırtasiyelerin activiylerinin tasarımları oluşturulacak. 
-
-• Mayıs 3-9:
-Eğitim Sektöründeki üniversite, yurt ve kırtasiyelerin activiylerinin tasarımları oluşturulacak. 
+Eğlence Sektöründeki kafe, AVM, restoran ve park activiylerinin tasarımları oluşturulacak.
 Eğitim Sektöründeki üniversite, yurt ve kırtasiyelerin java kodları yazılacak ve Firebase bağlantısı oluşturulacak.
 
+• Mayıs 3-9:
+Eğlence sektöründe bulunan işletmelerin java kodları yazılacak ve Firebase bağlantısı oluşturulacak.
+
 • Mayıs 10- 16:
-Google Maps projeye entegre edilecek. Eğlence ve Eğitim sektörünün bulunan işletmelerin projeye eklenecek.
+Eğlence ve Eğitim sektörünün bulunan işletmelerin konumları ve web siteleri projeye eklenecek.
 
 • Mayıs 17-23:
-Eklenmiş olan Projelerin konumları Google Maps ile eklenecek.
+
+Eğlence ve Eğitim sektörünün bulunan işletmelerde yapılacak yorum ve değerlendirmeler Kullanıcı Profil ekranına aktarılacak.
 
 • Mayıs 24- 30:
-Eğlence ve Eğitim sektörünün bulunan işletmelerde yapılacak yorum ve değerlendirmeler Kullanıcı Profil ekranına aktarılacak.
+Kullanıcı Profiline Post özelliği eklenecek ve Kullanıcı profilinde yayınlanacak.
 
 • Mayıs 31- Haziran 6:
 Son test aşamaları ve proje teslim edilecek.
