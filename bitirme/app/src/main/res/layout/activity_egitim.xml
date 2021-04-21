@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EgitimActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="186dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_baseline_yurtlaragit"
+        app:layout_constraintBottom_toTopOf="@+id/yurtlaragit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_baseline_okullaragit"
+        app:layout_constraintBottom_toTopOf="@+id/uniyegit"
+        app:layout_constraintEnd_toEndOf="@+id/uniyegit"
+        app:layout_constraintStart_toStartOf="@+id/uniyegit"
+        app:layout_constraintTop_toBottomOf="@+id/yurtlaragit" />
+
+    <Button
+        android:id="@+id/uniyegit"
+        android:layout_width="186dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="58dp"
+        android:backgroundTint="@android:color/transparent"
+        android:text="ÜNİVERSİTELER"
+        android:textColor="#1801e7"
+        android:textStyle="normal|bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:src="@drawable/ic_baseline_kirtasiyegit"
+        app:layout_constraintBottom_toTopOf="@+id/kirtasiyegit"
+        app:layout_constraintEnd_toEndOf="@+id/kirtasiyegit"
+        app:layout_constraintStart_toStartOf="@+id/kirtasiyegit"
+        app:layout_constraintTop_toBottomOf="@+id/uniyegit" />
+
+    <Button
+        android:id="@+id/kirtasiyegit"
+        android:layout_width="192dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="99dp"
+        android:backgroundTint="@android:color/transparent"
+        android:text="KIRTASİYELER"
+        android:textColor="#fe3620"
+        android:textStyle="normal|bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <Button
+        android:id="@+id/yurtlaragit"
+        android:layout_width="186dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="66dp"
+        android:backgroundTint="@android:color/transparent"
+        android:text="YURTLAR"
+        android:textColor="#01be57"
+        android:textStyle="normal|bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
