@@ -46,7 +46,6 @@ Eğlence sektöründe bulunan işletmelerin java kodları yazılacak ve Firebase
 Eğlence ve Eğitim sektörünün bulunan işletmelerin konumları ve web siteleri projeye eklenecek.
 
 • Mayıs 17-23:
-
 Eğlence ve Eğitim sektörünün bulunan işletmelerde yapılacak yorum ve değerlendirmeler Kullanıcı Profil ekranına aktarılacak.
 
 • Mayıs 24- 30:
