@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="25dp"
+    android:elevation="5dp"
+    android:layout_margin="3dp"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:id="@+id/hacibabaet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/hacibabaresim"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:srcCompat="@mipmap/hacibabaet"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="43dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:padding="2dp"
+                android:text="Hacıbaba Sinan Et Lokantası"
+                android:textColor="#D31212"
+                android:textSize="18sp"
+                android:textStyle="normal|bold|italic" />
+
+            <TextView
+                android:text="Akpınar Mah. Halfetin Cad.Malatya"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:padding="2dp"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/yaprakdoner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="90dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView122"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:srcCompat="@mipmap/yaprakdoner"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="43dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:padding="2dp"
+                android:text="Yaprak Döner"
+                android:textColor="#E61515"
+                android:textSize="18sp"
+                android:textStyle="normal|bold|italic" />
+
+            <TextView
+                android:text=" 20-32 Antepli Sokak, Malatya"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:padding="2dp"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/eymen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="170dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/eymenresim"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:srcCompat="@mipmap/eymen"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="43dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:padding="2dp"
+                android:text="Eymen Lahmacun"
+                android:textColor="#D31212"
+                android:textSize="18sp"
+                android:textStyle="normal|bold|italic" />
+
+            <TextView
+                android:text="Saray Mahallesi, Beskonaklar Caddesi, No: 1 Malatya"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:padding="2dp"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/kahtali"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="250dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/kahtaliresim"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:srcCompat="@mipmap/kahtali"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="43dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:padding="2dp"
+                android:text="Kahtalı Kavurma Köfte"
+                android:textColor="#D31212"
+                android:textSize="18sp"
+                android:textStyle="normal|bold|italic" />
+
+            <TextView
+                android:text="Fuzuli Cad. Kavukçuoğlu Sok. No: 21, Malatya"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:padding="2dp"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/alidayi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="320dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/alidayiresim"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:srcCompat="@mipmap/alidayi"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="43dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:padding="2dp"
+                android:text="Ali Dayı Balık Restaurant"
+                android:textColor="#D31212"
+                android:textSize="18sp"
+                android:textStyle="normal|bold|italic" />
+
+            <TextView
+                android:text="Kahramanmaraş Malatya Yolu No: 114/B Doğanşehir,Malatya"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:padding="2dp"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>
