@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="25dp"
+    android:elevation="5dp"
+    android:layout_margin="3dp"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:id="@+id/leventvadi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/leventvadiresim"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:srcCompat="@mipmap/levent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="43dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:padding="2dp"
+                android:text="Levent Vadisi"
+                android:textColor="#D31212"
+                android:textSize="18sp"
+                android:textStyle="normal|bold|italic" />
+
+            <TextView
+                android:text="Levent köyü,mahallesi,Akçadağ/Malatya"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:padding="2dp"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tozaltabiat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="90dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/tozaltabiatresim"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:srcCompat="@mipmap/turguttabiat"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="43dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:padding="2dp"
+                android:text="Turgut Özal Tabiat Parkı"
+                android:textColor="#E61515"
+                android:textSize="18sp"
+                android:textStyle="normal|bold|italic" />
+
+            <TextView
+                android:text="Orduzu, Inönü Cd, 44170 Malatya Merkez/Malatya"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:padding="2dp"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/beydagitabiat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="170dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/beydagitabiatresim"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:srcCompat="@mipmap/beydagittabiat"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="43dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:padding="2dp"
+                android:text="Beydağı Tabiat Parkı"
+                android:textColor="#D31212"
+                android:textSize="18sp"
+                android:textStyle="normal|bold|italic" />
+
+            <TextView
+                android:text="Mehmetçik Cd., Merkez/Malatya"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:padding="2dp"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/hurriyetpark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="250dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/hurriyetparkresim"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:srcCompat="@mipmap/hurriyet"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="43dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:padding="2dp"
+                android:text="Hürriyet Parkı"
+                android:textColor="#D31212"
+                android:textSize="18sp"
+                android:textStyle="normal|bold|italic" />
+
+            <TextView
+                android:text="Yunus Emre Cd. No:2,Merkez/Malatya"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:padding="2dp"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/kernekselale"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="320dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/kernekselaleresim"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:srcCompat="@mipmap/kernek"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="43dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:padding="2dp"
+                android:text="Kernek Şelalesi"
+                android:textColor="#D31212"
+                android:textSize="18sp"
+                android:textStyle="normal|bold|italic" />
+
+            <TextView
+                android:text="Hasan Varol,Battalgazi/Malatya"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:padding="2dp"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>
