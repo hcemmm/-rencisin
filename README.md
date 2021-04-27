@@ -35,7 +35,7 @@ Kullanıcı profil sayfası oluşturma, düzenleme ve kullanıcı profili java k
 • Nisan 19- 25: (YÜKLENDİ)
 Eğitim Sektöründeki üniversite, yurt ve kırtasiyelerin activiylerinin tasarımları oluşturulacak.
 
-• Nisan 26- Mayıs 2:
+• Nisan 26- Mayıs 2: (YÜKLENDİ)
 Eğlence Sektöründeki kafe, AVM, restoran ve park activiylerinin tasarımları oluşturulacak.
 Eğitim Sektöründeki üniversite, yurt ve kırtasiyelerin java kodları yazılacak ve Firebase bağlantısı oluşturulacak.
 

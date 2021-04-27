@@ -43,7 +43,7 @@
             app:cardCornerRadius="25dp"
             app:cardPreventCornerOverlap="false">
 
-
+ 
             <ImageView
                 android:id="@+id/alcatrazkullanici_yorumpp"
                 android:layout_width="match_parent"
