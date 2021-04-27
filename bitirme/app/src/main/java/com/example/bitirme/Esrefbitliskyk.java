@@ -146,11 +146,29 @@ public class Esrefbitliskyk extends AppCompatActivity {
                 new FirebaseRecyclerAdapter<Yorumkullanicilar, Yorumsahip>(options) {
                     @Override
                     protected void onBindViewHolder(@NonNull Yorumsahip holder, int position, @NonNull Yorumkullanicilar model) {
-                        holder.setData(getApplicationContext(), model.getYorum(),model.getAdsoyad(),model.getUrl(),model.getUid(),model.getZaman());
+                        holder.setData(getApplicationContext(), model.getYorum(),model.getAdsoyad(),model.getUrl(),model.getUid(),model.getZaman(),model.getKonum());
 
 
                         holder.setProfile(getApplicationContext());
                         String guid = getItem(position).getUid();
+                        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                        String kullans_id = user.getUid();
+
+
+                        yorum = getItem(position).getYorum();
+
+                        holder.yorumdasil.setOnClickListener(new View.OnClickListener() {
+
+                            @Override
+                            public void onClick(View v) {
+                                if (guid.equals(kullans_id)){
+                                    holder.yorumdasil.setVisibility(View.VISIBLE);
+                                    yorumsil(yorum);
+                                }else {
+                                    holder.yorumdasil.setVisibility(View.INVISIBLE);
+                                }
+                            }
+                        });
 
 
                         holder.yorumprofilbak.setOnClickListener(new View.OnClickListener() {
@@ -163,15 +181,6 @@ public class Esrefbitliskyk extends AppCompatActivity {
                             }
                         });
 
-                        holder.setOnClickListener(new Yorumsahip.Clicklistener() {
-                            @Override
-                            public void onItemlongClick(View view, int position) {
-
-                                yorum = getItem(position).getYorum();
-
-                                showDeleteDataDialog(yorum);
-                            }
-                        });
                     }
 
                     @NonNull
@@ -189,14 +198,13 @@ public class Esrefbitliskyk extends AppCompatActivity {
         recyclerView.setAdapter(firebaseRecyclerAdapter);
     }
 
-    private void showDeleteDataDialog(String yorum) {
+    private void yorumsil(String yorum) {
         AlertDialog.Builder builder = new AlertDialog.Builder(Esrefbitliskyk.this);
         builder.setTitle("Sil");
         builder.setMessage("Yorumunuz Silinsin mi?");
         builder.setPositiveButton("Evet", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int i) {
-
                 Query query = databaseReference.orderByChild("yorum").equalTo(yorum);
                 query.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
@@ -211,6 +219,24 @@ public class Esrefbitliskyk extends AppCompatActivity {
                     public void onCancelled(@NonNull DatabaseError databaseError) {
 
                     }
+
+                });
+
+                Query query2 = db2.orderByChild("yorum").equalTo(yorum);
+                query2.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        for (DataSnapshot ds : dataSnapshot.getChildren()) {
+                            ds.getRef().removeValue();
+                        }
+                        Toast.makeText(Esrefbitliskyk.this, "Yorum Silindi", Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+
                 });
             }
         });
@@ -222,6 +248,8 @@ public class Esrefbitliskyk extends AppCompatActivity {
         });
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
+
+
     }
 
     private void yorum_yap() {
@@ -244,6 +272,7 @@ public class Esrefbitliskyk extends AppCompatActivity {
             yorumkullanicilar.setUid(uid);
             yorumkullanicilar.setUrl(url);
             yorumkullanicilar.setZaman(time);
+            yorumkullanicilar.setKonum("Eşref Bitlis KYK");
 
 
             String id = db1.push().getKey();
