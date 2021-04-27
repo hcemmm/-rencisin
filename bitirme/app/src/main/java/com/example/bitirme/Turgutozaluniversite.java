@@ -41,19 +41,20 @@ import java.util.Calendar;
 
 public class Turgutozaluniversite extends AppCompatActivity {
 
+
     TextView yorumdaki_ad;
     ImageView yorumyap_profilresmi;
     EditText yorum_alani;
     Button yorum_gonder,adresegit,turgutwebegit;
-    String yorum,url,name_result,uid,kid;
-    RecyclerView recyclerView;
+    String yorum,url,name_result,uid;
+    RecyclerView recyclerView_mpark;
     FirebaseDatabase firebaseDatabase;
     DocumentReference reference;
     FirebaseFirestore firestore;
     DatabaseReference databaseReference;
     Yorumkullanicilar yorumkullanicilar;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference db1,db2,db3,db5;
+    DatabaseReference db1,db2,db3;
 
     Tumkullanicilar tumkullanicilar;
 
@@ -69,31 +70,35 @@ public class Turgutozaluniversite extends AppCompatActivity {
         yorumyap_profilresmi = findViewById(R.id.turgutkullanici_yorumpp);
         yorumkullanicilar = new Yorumkullanicilar();
         tumkullanicilar = new Tumkullanicilar();
-        recyclerView = findViewById(R.id.recycler_turgutyorumgor);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView_mpark = findViewById(R.id.recycler_turgutyorumgor);
+        recyclerView_mpark.setHasFixedSize(true);
+        recyclerView_mpark.setLayoutManager(new LinearLayoutManager(this));
         adresegit = findViewById(R.id.turgutharitagit);
         turgutwebegit = findViewById(R.id.turgutwebgit);
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String kullan_id = user.getUid();
 
+
         firestore = FirebaseFirestore.getInstance();
         reference = firestore.collection("kullanici").document(kullan_id);
 
+
         db1 = database.getReference("Tumyorumlar").child("TurgutOzal").child(kullan_id);
         db2 = database.getReference("KYorumlar").child(kullan_id);
-        db3 = database.getReference("Yorumlar").child("TurgutOzali");
+        db3 = database.getReference("Yorumlar").child("Turgut");
         db3.keepSynced(true);
 
 
-        databaseReference =database.getReference("Yorumlar").child("TurgutOzali");
+        databaseReference =database.getReference("Yorumlar").child("Turgut");
+
+
 
 
         turgutwebegit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent webintent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://ozal.edu.tr/"));
+                Intent webintent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://turgutozal.tabiat.gov.tr/"));
                 startActivity(webintent);
 
             }
@@ -102,7 +107,7 @@ public class Turgutozaluniversite extends AppCompatActivity {
         adresegit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent haritaintent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com/maps/place/Malatya+Turgut+%C3%96zal+%C3%9Cniveritesi/@38.4635159,38.3551785,15z/data=!4m2!3m1!1s0x0:0x11acabe91d6de725?sa=X&ved=2ahUKEwjwmqjh-oLwAhWRCOwKHcnLB40Q_BIwCnoECBIQBQ"));
+                Intent haritaintent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com/maps/place/Turgut+%C3%96zal+Tabiat+Park%C4%B1/@38.3526225,38.3849936,15z/data=!4m5!3m4!1s0x0:0xc8b753ca5d6d86c3!8m2!3d38.3526225!4d38.3849936?hl=tr"));
                 startActivity(haritaintent);
             }
         });
@@ -119,6 +124,7 @@ public class Turgutozaluniversite extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+
 
         reference.get()
                 .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -145,11 +151,30 @@ public class Turgutozaluniversite extends AppCompatActivity {
                 new FirebaseRecyclerAdapter<Yorumkullanicilar, Yorumsahip>(options) {
                     @Override
                     protected void onBindViewHolder(@NonNull Yorumsahip holder, int position, @NonNull Yorumkullanicilar model) {
-                        holder.setData(getApplicationContext(), model.getYorum(),model.getAdsoyad(),model.getUrl(),model.getUid(),model.getZaman());
+                        holder.setData(getApplicationContext(), model.getYorum(),model.getAdsoyad(),model.getUrl(),model.getUid(),model.getZaman(),model.getKonum());
 
+                        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                        String kullans_id = user.getUid();
 
                         holder.setProfile(getApplicationContext());
                         String guid = getItem(position).getUid();
+
+                        yorum = getItem(position).getYorum();
+
+
+                        holder.yorumdasil.setOnClickListener(new View.OnClickListener() {
+
+                            @Override
+                            public void onClick(View v) {
+                                if (guid.equals(kullans_id)){
+                                    holder.yorumdasil.setVisibility(View.VISIBLE);
+                                    yorumsil(yorum);
+                                }else {
+                                    holder.yorumdasil.setVisibility(View.INVISIBLE);
+                                }
+
+                            }
+                        });
 
 
 
@@ -164,17 +189,6 @@ public class Turgutozaluniversite extends AppCompatActivity {
                             }
                         });
 
-
-                        holder.setOnClickListener(new Yorumsahip.Clicklistener() {
-                            @Override
-                            public void onItemlongClick(View view, int position) {
-
-                                yorum = getItem(position).getYorum();
-
-
-                                yorumsilbas(yorum);
-                            }
-                        });
                     }
 
                     @NonNull
@@ -189,19 +203,35 @@ public class Turgutozaluniversite extends AppCompatActivity {
                     }
                 };
         firebaseRecyclerAdapter.startListening();
-        recyclerView.setAdapter(firebaseRecyclerAdapter);
+        recyclerView_mpark.setAdapter(firebaseRecyclerAdapter);
     }
 
-    private void yorumsilbas(String yorum) {
+    private void yorumsil(String yorum) {
         AlertDialog.Builder builder = new AlertDialog.Builder(Turgutozaluniversite.this);
         builder.setTitle("Sil");
         builder.setMessage("Yorumunuz Silinsin mi?");
         builder.setPositiveButton("Evet", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int i) {
-
                 Query query = databaseReference.orderByChild("yorum").equalTo(yorum);
                 query.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        for (DataSnapshot ds : dataSnapshot.getChildren()) {
+                            ds.getRef().removeValue();
+                        }
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+
+                });
+
+                Query query2 = db2.orderByChild("yorum").equalTo(yorum);
+                query2.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         for (DataSnapshot ds : dataSnapshot.getChildren()) {
@@ -214,8 +244,8 @@ public class Turgutozaluniversite extends AppCompatActivity {
                     public void onCancelled(@NonNull DatabaseError databaseError) {
 
                     }
-                });
 
+                });
             }
         });
         builder.setNegativeButton("Hayır", new DialogInterface.OnClickListener() {
@@ -226,6 +256,8 @@ public class Turgutozaluniversite extends AppCompatActivity {
         });
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
+
+
     }
 
     private void yorum_yap() {
@@ -248,6 +280,7 @@ public class Turgutozaluniversite extends AppCompatActivity {
             yorumkullanicilar.setUid(uid);
             yorumkullanicilar.setUrl(url);
             yorumkullanicilar.setZaman(time);
+            yorumkullanicilar.setKonum("Turgut Özal Tabiat Parki");
 
 
 
