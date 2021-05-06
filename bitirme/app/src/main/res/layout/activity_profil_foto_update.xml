@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".ProfilFotoUpdate">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardCornerRadius="100dp"
+        android:elevation="8dp"
+        android:onClick="fotosec"
+        android:layout_marginBottom="50dp"
+        app:cardElevation="10dp"
+        tools:ignore="OnClick">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/up_fotosec"
+            android:background="@drawable/ic_baseline_person_24"
+            android:clickable="true"
+            android:onClick="fotosec"
+            android:scaleType="fitCenter"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Değiştir"
+        android:id="@+id/up_butonsec"
+        android:backgroundTint="@android:color/transparent"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="20sp"
+        android:layout_margin="10dp"/>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/up_progres"
+        android:layout_marginTop="50dp"
+        android:visibility="invisible"/>
+
+</LinearLayout>
