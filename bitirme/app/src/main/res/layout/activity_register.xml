@@ -4,20 +4,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/d154c32eccd581cb46f38fb3499defe1"
+    android:background="@drawable/gradient"
     tools:context=".RegisterActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="Öğrencisin"
+        android:textAllCaps="true"
+        android:textColor="#B38787"
+        android:textSize="44sp"
+        android:textStyle="normal|bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/kayit_kullaniciadi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="137dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="66dp"
         android:ems="10"
+        android:hint="Adı ve Soyadı"
         android:inputType="textPersonName"
-        android:text="  Adı ve Soyadı"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textColorHint="#F3F0F0"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/kayit_kullaniciiletisim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31dp"
+        android:ems="10"
+        android:hint="Telefon"
+        android:inputType="textPhonetic"
+        android:textColorHint="#F3F0F0"
+        app:layout_constraintStart_toStartOf="@+id/kayit_kullaniciposta"
+        app:layout_constraintTop_toBottomOf="@+id/kayit_kullaniciposta" />
+
+    <EditText
+        android:id="@+id/kayit_kullanicisifre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:ems="10"
+        android:hint="Sifre"
+        android:inputType="textPassword"
+        android:textColorHint="#F3F0F0"
+        app:layout_constraintStart_toStartOf="@+id/kayit_kullaniciiletisim"
+        app:layout_constraintTop_toBottomOf="@+id/kayit_kullaniciiletisim" />
 
     <EditText
         android:id="@+id/kayit_kullaniciposta"
@@ -27,38 +68,17 @@
         android:layout_marginLeft="1dp"
         android:layout_marginTop="23dp"
         android:ems="10"
+        android:hint="Eposta"
         android:inputType="textPersonName"
-        android:text="  Eposta"
+        android:textColorHint="#F3F0F0"
         app:layout_constraintStart_toStartOf="@+id/kayit_kullaniciadi"
         app:layout_constraintTop_toBottomOf="@+id/kayit_kullaniciadi" />
- 
-    <EditText
-        android:id="@+id/kayit_kullanicisifre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:ems="10"
-        android:hint="Sifre"
-        android:inputType="textPassword"
-        app:layout_constraintStart_toStartOf="@+id/kayit_kullaniciiletisim"
-        app:layout_constraintTop_toBottomOf="@+id/kayit_kullaniciiletisim" />
-
-    <EditText
-        android:id="@+id/kayit_kullaniciiletisim"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="31dp"
-        android:ems="10"
-        android:inputType="textPhonetic"
-        android:text="  Telefon"
-        app:layout_constraintStart_toStartOf="@+id/kayit_kullaniciposta"
-        app:layout_constraintTop_toBottomOf="@+id/kayit_kullaniciposta" />
 
     <Button
         android:id="@+id/kayitbuton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="73dp"
         android:backgroundTint="@android:color/transparent"
         android:text="kayıt ol"
         app:layout_constraintEnd_toEndOf="parent"
