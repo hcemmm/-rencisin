@@ -1,16 +1,11 @@
 package com.example.bitirme;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import java.util.ArrayList;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class UniversiteActivity extends AppCompatActivity {
 
@@ -24,7 +19,7 @@ public class UniversiteActivity extends AppCompatActivity {
         inonu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent picture_intent = new Intent(UniversiteActivity.this,Inonuuniversite.class);
+                Intent picture_intent = new Intent(UniversiteActivity.this, com.example.bitirme.Inonuuniversite.class);
                 startActivity(picture_intent );
             }
         });
@@ -33,7 +28,7 @@ public class UniversiteActivity extends AppCompatActivity {
         turguozal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent picture_intent = new Intent(UniversiteActivity.this,Turgutozaluniversite.class);
+                Intent picture_intent = new Intent(UniversiteActivity.this, com.example.bitirme.Turgutozaluniversite.class);
                 startActivity(picture_intent );
             }
         });
