@@ -1,8 +1,5 @@
 package com.example.bitirme;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -12,6 +9,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -20,9 +20,9 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    EditText mFullname,mEmail,mPassword,mPhone;
-    Button mRegisterbtn;
-    TextView mLoginButton;
+    EditText madsoyad,mEmail,msifre,mtelefon;
+    Button mkayitol;
+    TextView mgirisyap;
     FirebaseAuth fAuth;
 
 
@@ -30,22 +30,22 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
- 
-        mFullname=findViewById(R.id.kayit_kullaniciadi);
+
+        madsoyad=findViewById(R.id.kayit_kullaniciadi);
         mEmail=findViewById(R.id.kayit_kullaniciposta);
-        mPassword=findViewById(R.id.kayit_kullanicisifre);
-        mPhone=findViewById(R.id.kayit_kullaniciiletisim);
-        mRegisterbtn=findViewById(R.id.kayitbuton);
-        mLoginButton=findViewById(R.id.createtext);
+        msifre=findViewById(R.id.kayit_kullanicisifre);
+        mtelefon=findViewById(R.id.kayit_kullaniciiletisim);
+        mkayitol=findViewById(R.id.kayitbuton);
+        mgirisyap=findViewById(R.id.createtext);
         fAuth=FirebaseAuth.getInstance();
 
 
 
-        mRegisterbtn.setOnClickListener(new View.OnClickListener(){
+        mkayitol.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 String email= mEmail.getText().toString().trim();
-                String password = mPassword.getText().toString().trim();
+                String password = msifre.getText().toString().trim();
 
                 if(TextUtils.isEmpty(email)){
                     mEmail.setError("Eposta Giriniz");
@@ -53,12 +53,12 @@ public class RegisterActivity extends AppCompatActivity {
                 }
 
                 if(TextUtils.isEmpty(password)){
-                    mPassword.setError("Şifrenizi Giriniz");
+                    msifre.setError("Şifrenizi Giriniz");
                     return;
                 }
 
                 if(password.length()<6){
-                    mPassword.setError("Şifreniz Hata Uzun Olmalı");
+                    msifre.setError("Şifreniz Hata Uzun Olmalı");
                     return;
                 }
                 fAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -69,14 +69,14 @@ public class RegisterActivity extends AppCompatActivity {
                             startActivity(new Intent(getApplicationContext(),LoginActivity.class));
                         }
                         else{
-                            Toast.makeText(RegisterActivity.this, "Hata!" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegisterActivity.this, "Hata!" , Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
             }
         });
 
-        mLoginButton.setOnClickListener(new View.OnClickListener(){
+        mgirisyap.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(),LoginActivity.class));
