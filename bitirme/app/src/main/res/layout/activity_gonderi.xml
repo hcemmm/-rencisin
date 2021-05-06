@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".GonderiActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:cardBackgroundColor="@android:color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:text="Gönderi"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+
+        <ImageButton
+            android:id="@+id/gonderi_ekle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_margin="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_baseline_onay" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/gonderi_fotograf"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerCrop"
+        android:src="@color/cardview_shadow_start_color"
+        tools:ignore="MissingConstraints" />
+
+
+    <Button
+        android:id="@+id/gonderi_sec"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="90dp"
+        android:background="@android:color/transparent"
+        android:text="Gönderinizi Seçiniz"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="373dp" />
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="490dp"
+    tools:ignore="MissingConstraints">
+
+    <EditText
+        android:id="@+id/gonderi_bilgi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/red"
+        android:hint="Açıklama giriniz..."
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:textColor="@color/red"
+        android:textColorHint="@color/red"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="435dp" />
+
+
+</RelativeLayout>
+
+
+    <ProgressBar
+        android:id="@+id/gonderi_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_marginLeft="175dp"
+        android:layout_marginTop="600dp"
+        tools:layout_editor_absoluteX="181dp"
+        tools:layout_editor_absoluteY="584dp" />
+</RelativeLayout>
