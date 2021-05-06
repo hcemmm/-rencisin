@@ -95,17 +95,6 @@
                 android:textSize="11sp"
                 android:textStyle="bold|italic" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Sil"
-                android:textStyle="bold"
-                android:textSize="10sp"
-                android:textColor="@color/cardview_shadow_start_color"
-                android:clickable="true"
-                android:id="@+id/yorumdaki_sil"
-                android:padding="4dp"
-                />
 
 
 
