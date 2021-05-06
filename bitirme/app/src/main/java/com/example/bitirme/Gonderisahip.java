@@ -32,7 +32,7 @@ public class Gonderisahip extends RecyclerView.ViewHolder {
 
         SimpleExoPlayer exoPlayer;
         kullanicifoto_paylasim = itemView.findViewById(R.id.paylasim_kullanicifoto);
-        image_paylasim = itemView.findViewById(R.id.paylasim_image);
+        image_paylasim = itemView.findViewById(R.id.paylasim_image); 
         aciklma_paylasim = itemView.findViewById(R.id.paylasim_aciklama);
         zaman_paylasim = itemView.findViewById(R.id.paylasim_zaman);
         adsoyad_paylasim = itemView.findViewById(R.id.paylasim_adsoyad);
