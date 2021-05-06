@@ -33,6 +33,7 @@ public class Gonderikullanicilar {
 
     public String getGkTime() {
         return gkTime;
+        
     }
 
     public void setGkTime(String gkTime) {
