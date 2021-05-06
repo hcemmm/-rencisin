@@ -4,55 +4,83 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/d154c32eccd581cb46f38fb3499defe1"
+    android:background="@drawable/gradient"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginLeft="92dp"
         android:layout_marginTop="94dp"
-        android:layout_marginEnd="68dp"
-        android:layout_marginRight="68dp"
-        android:layout_marginBottom="97dp"
+        android:layout_marginBottom="132dp"
         android:text="Öğrencisin"
         android:textAllCaps="true"
         android:textColor="#B38787"
         android:textSize="44sp"
         android:textStyle="normal|bold|italic"
         app:layout_constraintBottom_toTopOf="@+id/button6"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
- 
+
+
     <Button
         android:id="@+id/button6"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="250dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginLeft="58dp"
+        android:layout_marginBottom="58dp"
         android:backgroundTint="@android:color/transparent"
         android:onClick="girisyap"
         android:text="Giriş Yap"
         android:textAllCaps="true"
+        app:layout_constraintBottom_toTopOf="@+id/button7"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_editor_absoluteX="50dp"
         app:layout_editor_absoluteY="250dp" />
 
     <Button
         android:id="@+id/button7"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="61dp"
-        android:layout_marginRight="61dp"
-        android:layout_marginBottom="284dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginRight="68dp"
+        android:layout_marginBottom="214dp"
         android:backgroundTint="@android:color/transparent"
         android:onClick="kayitol"
         android:text="Kayıt Ol"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/instagit"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button6"
         app:layout_editor_absoluteX="250dp"
         app:layout_editor_absoluteY="399dp" />
+
+    <TextView
+        android:id="@+id/instagit"
+        android:layout_width="27dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="35dp"
+        android:background="@mipmap/instagram"
+        app:layout_constraintBottom_toTopOf="@+id/git_ogrencisin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button7" />
+
+    <TextView
+        android:id="@+id/git_ogrencisin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="74dp"
+        android:text="ogrencisin.com"
+        android:textAllCaps="true"
+        android:textColor="#F3F0F0"
+        android:textStyle="normal|bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instagit" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
