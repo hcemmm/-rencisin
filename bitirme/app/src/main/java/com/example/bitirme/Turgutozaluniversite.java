@@ -1,5 +1,6 @@
 package com.example.bitirme;
 
+import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
@@ -14,7 +15,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -48,10 +48,8 @@ public class Turgutozaluniversite extends AppCompatActivity {
     Button yorum_gonder,adresegit,turgutwebegit;
     String yorum,url,name_result,uid;
     RecyclerView recyclerView_mpark;
-    FirebaseDatabase firebaseDatabase;
     DocumentReference reference;
     FirebaseFirestore firestore;
-    DatabaseReference databaseReference;
     Yorumkullanicilar yorumkullanicilar;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference db1,db2,db3;
@@ -88,11 +86,6 @@ public class Turgutozaluniversite extends AppCompatActivity {
         db2 = database.getReference("KYorumlar").child(kullan_id);
         db3 = database.getReference("Yorumlar").child("Turgut");
         db3.keepSynced(true);
-
-
-        databaseReference =database.getReference("Yorumlar").child("Turgut");
-
-
 
 
         turgutwebegit.setOnClickListener(new View.OnClickListener() {
@@ -143,7 +136,7 @@ public class Turgutozaluniversite extends AppCompatActivity {
 
         FirebaseRecyclerOptions<Yorumkullanicilar> options =
                 new FirebaseRecyclerOptions.Builder<Yorumkullanicilar>()
-                        .setQuery(databaseReference, Yorumkullanicilar.class)
+                        .setQuery(db3, Yorumkullanicilar.class)
                         .build();
 
 
@@ -159,20 +152,23 @@ public class Turgutozaluniversite extends AppCompatActivity {
                         holder.setProfile(getApplicationContext());
                         String guid = getItem(position).getUid();
 
-                        yorum = getItem(position).getYorum();
-
-
-                        holder.yorumdasil.setOnClickListener(new View.OnClickListener() {
-
+                        holder.setOnClickListener(new Yorumsahip.Clicklistener() {
                             @Override
-                            public void onClick(View v) {
+                            public void onItemlongClick(View view, int position) {
                                 if (guid.equals(kullans_id)){
-                                    holder.yorumdasil.setVisibility(View.VISIBLE);
-                                    yorumsil(yorum);
-                                }else {
-                                    holder.yorumdasil.setVisibility(View.INVISIBLE);
-                                }
+                                    holder.setOnClickListener(new Yorumsahip.Clicklistener() {
+                                        @Override
+                                        public void onItemlongClick(View view, int position) {
 
+                                            yorum = getItem(position).getYorum();
+
+                                            yorumsil(yorum);
+                                        }
+                                    });
+                                }else {
+                                    holder.setOnClickListener(null);
+                                    return;
+                                }
                             }
                         });
 
@@ -207,57 +203,54 @@ public class Turgutozaluniversite extends AppCompatActivity {
     }
 
     private void yorumsil(String yorum) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(Turgutozaluniversite.this);
+        AlertDialog .Builder builder = new AlertDialog.Builder(Turgutozaluniversite.this);
         builder.setTitle("Sil");
-        builder.setMessage("Yorumunuz Silinsin mi?");
-        builder.setPositiveButton("Evet", new DialogInterface.OnClickListener() {
+        builder.setMessage("Yorumu silmek istiyor musunuz?");
+        builder.setPositiveButton("evet", new DialogInterface.OnClickListener() {
             @Override
-            public void onClick(DialogInterface dialog, int i) {
-                Query query = databaseReference.orderByChild("yorum").equalTo(yorum);
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+                Query query = db3.orderByChild("yorum").equalTo(yorum);
                 query.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        for (DataSnapshot ds : dataSnapshot.getChildren()) {
+                        for (DataSnapshot ds : dataSnapshot.getChildren()){
                             ds.getRef().removeValue();
                         }
-
                     }
 
                     @Override
                     public void onCancelled(@NonNull DatabaseError databaseError) {
 
                     }
-
                 });
 
                 Query query2 = db2.orderByChild("yorum").equalTo(yorum);
                 query2.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        for (DataSnapshot ds : dataSnapshot.getChildren()) {
+                        for (DataSnapshot ds : dataSnapshot.getChildren()){
                             ds.getRef().removeValue();
                         }
-                        Toast.makeText(Turgutozaluniversite.this, "Yorum Silindi", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Turgutozaluniversite.this, "Silindi", Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
                     public void onCancelled(@NonNull DatabaseError databaseError) {
 
                     }
-
                 });
             }
         });
         builder.setNegativeButton("Hayır", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
+
                 dialogInterface.dismiss();
             }
         });
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
-
-
     }
 
     private void yorum_yap() {
@@ -271,6 +264,7 @@ public class Turgutozaluniversite extends AppCompatActivity {
                 SimpleDateFormat("HH:mm");
         final  String savetime = currenttime.format(callfortime.getTime());
 
+
         String time = savedate+":"+savetime;
         String comment = yorum_alani.getText().toString();
         if (comment != null){
@@ -280,7 +274,7 @@ public class Turgutozaluniversite extends AppCompatActivity {
             yorumkullanicilar.setUid(uid);
             yorumkullanicilar.setUrl(url);
             yorumkullanicilar.setZaman(time);
-            yorumkullanicilar.setKonum("Turgut Özal Tabiat Parki");
+            yorumkullanicilar.setKonum("Turgut Özal Üniversitesi");
 
 
 
