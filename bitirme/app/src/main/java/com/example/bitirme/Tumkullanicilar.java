@@ -1,7 +1,23 @@
 package com.example.bitirme;
 
 public class Tumkullanicilar {
-    String adsoyad,yas,iletisim,uid,url;
+    String adsoyad,yas,iletisim,uid,url,time,comment;
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
 
     public Tumkullanicilar(){
 
@@ -30,7 +46,7 @@ public class Tumkullanicilar {
     public String getAdsoyad() {
         return adsoyad;
     }
- 
+
     public void setAdsoyad(String adsoyad) {
         this.adsoyad = adsoyad;
     }
