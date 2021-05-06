@@ -4,20 +4,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/d154c32eccd581cb46f38fb3499defe1"
+    android:background="@drawable/gradient"
     tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        android:text="Öğrencisin"
+        android:textAllCaps="true"
+        android:textColor="#B38787"
+        android:textSize="44sp"
+        android:textStyle="normal|bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/kayit_kullaniciposta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="148dp"
+        android:layout_marginTop="205dp"
         android:ems="10"
-        android:hint="Email"
+        android:hint="E-Posta Adresi"
         android:inputType="textEmailAddress"
+        android:textColorHint="#F3F0F0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/kayit_sunut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:text="Şifrenizi mi unuttunuz?"
+        android:textColor="#F3F0F0"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/kayit_kullanicisifre"
+        app:layout_constraintTop_toBottomOf="@+id/kayit_kullanicisifre" />
 
     <EditText
         android:id="@+id/kayit_kullanicisifre"
@@ -25,21 +53,24 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:ems="10"
-        android:hint="Password"
+        android:hint="Şifre"
         android:inputType="textPassword"
+        android:textColorHint="#F3F0F0"
         app:layout_constraintStart_toStartOf="@+id/kayit_kullaniciposta"
         app:layout_constraintTop_toBottomOf="@+id/kayit_kullaniciposta" />
- 
+
     <Button
         android:id="@+id/Loginbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="248dp"
-        android:text="Giriş"
-        app:backgroundTint="@android:color/transparent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="74dp"
+        android:backgroundTint="@android:color/transparent"
+        android:hint="Giriş"
+        android:textColorHint="#F3F0F0"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kayit_sunut" />
+
 
     <TextView
         android:id="@+id/kayitagit"
