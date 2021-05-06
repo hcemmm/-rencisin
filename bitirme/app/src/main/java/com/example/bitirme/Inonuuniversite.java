@@ -155,19 +155,26 @@ public class Inonuuniversite extends AppCompatActivity {
                         yorum = getItem(position).getYorum();
 
 
-                        holder.yorumdasil.setOnClickListener(new View.OnClickListener() {
-
+                        holder.setOnClickListener(new Yorumsahip.Clicklistener() {
                             @Override
-                            public void onClick(View v) {
+                            public void onItemlongClick(View view, int position) {
                                 if (guid.equals(kullans_id)){
-                                    holder.yorumdasil.setVisibility(View.VISIBLE);
-                                    yorumsil(yorum);
-                                }else {
-                                    holder.yorumdasil.setVisibility(View.INVISIBLE);
-                                }
+                                    holder.setOnClickListener(new Yorumsahip.Clicklistener() {
+                                        @Override
+                                        public void onItemlongClick(View view, int position) {
 
+                                            yorum = getItem(position).getYorum();
+
+                                            yorumsil(yorum);
+                                        }
+                                    });
+                                }else {
+                                    holder.setOnClickListener(null);
+                                    return;
+                                }
                             }
                         });
+
                         holder.yorumprofilbak.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
