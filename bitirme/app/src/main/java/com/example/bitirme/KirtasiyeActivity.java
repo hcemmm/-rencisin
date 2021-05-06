@@ -1,11 +1,11 @@
 package com.example.bitirme;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class KirtasiyeActivity extends AppCompatActivity {
 
@@ -18,7 +18,7 @@ public class KirtasiyeActivity extends AppCompatActivity {
         dr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent picture_intent = new Intent(KirtasiyeActivity.this,Dr.class);
+                Intent picture_intent = new Intent(KirtasiyeActivity.this, com.example.bitirme.Dr.class);
                 startActivity(picture_intent );
             }
         });
@@ -27,7 +27,7 @@ public class KirtasiyeActivity extends AppCompatActivity {
         copycenter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent picture_intent = new Intent(KirtasiyeActivity.this,Copycenter.class);
+                Intent picture_intent = new Intent(KirtasiyeActivity.this, com.example.bitirme.Copycenter.class);
                 startActivity(picture_intent );
             }
         });
@@ -36,7 +36,7 @@ public class KirtasiyeActivity extends AppCompatActivity {
         dicle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent picture_intent = new Intent(KirtasiyeActivity.this,Diclekirtasiye.class);
+                Intent picture_intent = new Intent(KirtasiyeActivity.this, com.example.bitirme.Diclekirtasiye.class);
                 startActivity(picture_intent );
             }
         });
