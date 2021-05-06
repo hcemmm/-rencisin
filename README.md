@@ -39,7 +39,7 @@ Eğitim Sektöründeki üniversite, yurt ve kırtasiyelerin activiylerinin tasar
 Eğlence Sektöründeki kafe, AVM, restoran ve park activiylerinin tasarımları oluşturulacak.
 Eğitim Sektöründeki üniversite, yurt ve kırtasiyelerin java kodları yazılacak ve Firebase bağlantısı oluşturulacak.
 
-• Mayıs 3-9:
+• Mayıs 3-9: (YÜKLENDİ)
 Eğlence sektöründe bulunan işletmelerin java kodları yazılacak ve Firebase bağlantısı oluşturulacak.
 
 • Mayıs 10- 16:
