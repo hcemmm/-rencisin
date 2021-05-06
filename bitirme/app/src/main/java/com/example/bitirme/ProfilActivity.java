@@ -1,14 +1,9 @@
 package com.example.bitirme;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
 import android.text.TextUtils;
 import android.view.View;
 import android.webkit.MimeTypeMap;
@@ -17,6 +12,10 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -52,6 +51,7 @@ public class ProfilActivity extends AppCompatActivity {
     Tumkullanicilar kullanici;
     String kullanici_id;
     private static final int PICK_IMAGE=1;
+
 
 
     @Override
