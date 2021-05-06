@@ -8,4 +8,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="redd">#FF061E</color>
+    <color name="arkaplan">#35419F</color>
+    <color name="colorPrimary">#FF061E</color>
+    <color name="colorPrimaryDark">#F44336</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="red">#FF061E</color>
+    <color name="start">#FF061E</color>
+    <color name="grey">#AAA4AA</color>
+    <color name="textcolorgrey">#696969</color>
 </resources>
