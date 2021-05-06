@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="5dp"
+    app:cardBackgroundColor="@android:color/white"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="3dp">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                app:cardPreventCornerOverlap="false"
+                app:cardCornerRadius="20dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/paylasim_kullanicifoto"
+                    android:background="@drawable/ic_baseline_person_24"
+                    android:clickable="true"
+                    android:scaleType="centerCrop"/>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:hint="Ad Soyad"
+                    android:textSize="15sp"
+                    android:id="@+id/paylasim_adsoyad"
+                    android:paddingStart="5dp"
+                    android:paddingLeft="5dp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/red"
+                    android:hint="Gönderi Zamanı"
+                    android:textSize="10sp"
+                    android:id="@+id/paylasim_zaman"
+                    android:paddingStart="5dp"
+                    android:paddingLeft="5dp" />
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/cardview_shadow_start_color"
+                android:textSize="10sp"
+                android:background="@drawable/ic_baseline_menu_24"
+                android:layout_marginLeft="202dp"
+                android:id="@+id/paylasim_sil"
+                android:paddingStart="5dp"
+                android:paddingLeft="5dp" />
+
+
+        </LinearLayout>
+
+
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:id="@+id/paylasim_image"
+                android:scaleType="centerCrop"
+                android:visibility="visible"
+                tools:ignore="MissingConstraints" />
+
+
+            <com.google.android.exoplayer2.ui.PlayerView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:id="@+id/paylasim_resim"
+                app:use_controller="true"
+                app:show_timeout="3000"
+                android:visibility="visible"
+                app:resize_mode="fill"
+
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/paylasim_aciklama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:hint="Gönderi Açıklaması"
+            android:paddingStart="5dp"
+            android:paddingLeft="5dp"
+            android:textColor="#120a8f"
+            android:textSize="15sp"
+            android:textStyle="bold|italic" />
+
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>
