@@ -25,6 +25,7 @@
             android:layout_gravity="center_horizontal"
             android:textStyle="bold"/>
 
+
         <ImageButton
             android:id="@+id/ib_editmenu"
             android:layout_width="wrap_content"
@@ -32,16 +33,17 @@
             android:layout_gravity="left|center_vertical"
             android:layout_margin="10dp"
             android:background="@android:color/transparent"
-            android:src="@drawable/ic_baseline_edit_24" />
+            android:src="@drawable/ic_baseline_menu_24" />
 
         <ImageButton
-            android:id="@+id/ib_cikis"
+            android:id="@+id/ib_eklepost"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right|center_vertical"
             android:layout_margin="10dp"
             android:background="@android:color/transparent"
-            android:src="@drawable/ic_baseline_cikislogo" />
+            android:src="@drawable/ic_baseline_eklepost"/>
+
 
     </androidx.cardview.widget.CardView>
 
@@ -76,6 +78,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
             android:orientation="vertical">
 
             <TextView
@@ -112,10 +115,11 @@
                 android:layout_marginBottom="2dp"
                 android:gravity="start"
                 android:drawableLeft="@drawable/ic_baseline_email_24"
+                android:clickable="true"
+                android:textColor="@android:color/holo_blue_dark"
                 android:paddingStart="11dp"
                 android:paddingLeft="11dp"
                 android:textAlignment="viewStart"
-                android:textColor="@color/black"
                 android:textSize="15sp"
                 android:textStyle="normal|bold|italic" />
 
@@ -139,6 +143,50 @@
         android:textColor="@color/black"
         android:textAlignment="viewStart"
         android:gravity="start"
-        android:textSize="20sp"/>
+        android:textSize="20sp"
+        tools:ignore="RtlSymmetry" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="-5dp"
+        android:layout_marginRight="-5dp"
+        android:id="@+id/profil_bar"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/profil_fotolar"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_kamera" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/profil_yorumlar"
+            android:src="@drawable/ic_baseline_yorumlar"
+            android:layout_height="wrap_content"
+            style="?android:attr/buttonBarButtonStyle"/>
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/profil_gonderiler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/profil_kyorum"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
 
 </LinearLayout>
