@@ -1,5 +1,8 @@
 Proje Adı: Öğrencisin
 
+Proje Tamamlanmıştır. 
+Proje Kısa Tanıtım Videosu: https://drive.google.com/file/d/1x1CFAzz5UFouWeTJNvciD-9mVhiigsah/view?usp=sharing
+
 İş Süresi: 10 Hafta
 
 Yapılacak Geliştirmeler: Android
