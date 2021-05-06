@@ -42,15 +42,15 @@ Eğitim Sektöründeki üniversite, yurt ve kırtasiyelerin java kodları yazıl
 • Mayıs 3-9: (YÜKLENDİ)
 Eğlence sektöründe bulunan işletmelerin java kodları yazılacak ve Firebase bağlantısı oluşturulacak.
 
-• Mayıs 10- 16:
+• Mayıs 10- 16: (YÜKLENDİ)
 Eğlence ve Eğitim sektörünün bulunan işletmelerin konumları ve web siteleri projeye eklenecek.
 
-• Mayıs 17-23:
+• Mayıs 17-23: (YÜKLENDİ)
 Eğlence ve Eğitim sektörünün bulunan işletmelerde yapılacak yorum ve değerlendirmeler Kullanıcı Profil ekranına aktarılacak.
 
-• Mayıs 24- 30:
+• Mayıs 24- 30: (YÜKLENDİ)
 Kullanıcı Profiline Post özelliği eklenecek ve Kullanıcı profilinde yayınlanacak.
 
-• Mayıs 31- Haziran 6:
+• Mayıs 31- Haziran 6: (BAŞARILI)
 Son test aşamaları ve proje teslim edilecek.
 
